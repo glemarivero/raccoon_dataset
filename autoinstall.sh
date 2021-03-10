@@ -1,4 +1,4 @@
-pip install -r requirements
+pip install -r requirements.txt
 CWD=`pwd`
 export TF_DIR=/tmp/tensorflow
 mkdir $TF_DIR 
