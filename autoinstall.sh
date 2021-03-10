@@ -28,7 +28,7 @@ python -m pip install .
 
 pip install numpy==1.20
 # finally fix bug in tensorflow array_ops file
-cd $PWD
+cd $CWD
 file=`python -c 'from tensorflow.python.ops import array_ops; print(array_ops.__file__)'`
 sed -i "s/np.prod/tf.math.reduce_prod/g" $file
 sed -i 's/import numpy as np/import numpy as np; import tensorflow as tf/' $file
